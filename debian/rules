@@ -8,6 +8,7 @@ CONFIGURE_FLAGS += -DLIB_SUFFIX="/$(DEB_HOST_MULTIARCH)"
 
 ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
 CONFIGURE_FLAGS += -DBUILD_TESTS=ON
+CONFIGURE_FLAGS += -DGTEST_ROOT=/usr/src/googletest/googletest/
 endif
 
 %:
